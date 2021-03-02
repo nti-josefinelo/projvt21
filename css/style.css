@@ -1,1 +1,44 @@
 /* Denna fil skall innehålla din CSS kod */
+@media screen and (max-width: 767px) {
+    body {
+        background-color: indianred;
+    }
+#container {
+    display: grid;
+    width: 100vw;
+   height: 200vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'he he'
+    'ar ar'
+    'na na'
+    'as1 as2'
+    'fo fo';
+}
+.header {
+    grid-area: he;
+    background-color: indigo;
+}
+.article {
+    grid-area: ar;
+    background-color: lavenderblush;
+}
+.aside1 {
+    grid-area: as1;
+    background-color: lightblue;
+}
+.aside2 {
+    grid-area: as2;
+    background-color: lightseagreen;
+}
+.nav {
+    grid-area: na;
+    background-color: maroon;
+}
+.footer {
+    grid-area: fo;
+    background-color: mediumvioletred;
+}
+
+}
