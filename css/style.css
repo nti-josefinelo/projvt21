@@ -1,44 +1,303 @@
 /* Denna fil skall innehålla din CSS kod */
-@media screen and (max-width: 767px) {
-    body {
-        background-color: indianred;
-    }
-#container {
-    display: grid;
-    width: 100vw;
-   height: 200vh;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    'he he'
-    'ar ar'
-    'na na'
-    'as1 as2'
-    'fo fo';
-}
-.header {
-    grid-area: he;
-    background-color: indigo;
-}
-.article {
-    grid-area: ar;
-    background-color: lavenderblush;
-}
-.aside1 {
-    grid-area: as1;
-    background-color: lightblue;
-}
-.aside2 {
-    grid-area: as2;
-    background-color: lightseagreen;
-}
-.nav {
-    grid-area: na;
-    background-color: maroon;
-}
-.footer {
-    grid-area: fo;
-    background-color: mediumvioletred;
+* {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@media screen and (min-width: 768px) {
+    #container {
+        display: grid;
+        grid-gap: 5px;
+        width: 100vw;
+       height: 170vh;
+        grid-template-rows: 2fr 1fr 3fr 3fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'he he he'
+        'ar ar ar'
+        'as1 na na'
+        'as2 na na'
+        'fo fo fo';
+    }
+
+    .header {
+        grid-area: he;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        margin-top: 1%;
+    }
+
+    .article {
+        grid-area: ar;
+        background-color: rgb(188, 8, 7);
+        display: grid;
+        width: 100vw;
+        height: 150vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 80px;
+    }
+
+    .innerarticle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    a:link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: darkgray;
+        text-decoration: none;
+    }
+
+    .aside1 {
+        grid-area: as1;
+        background-image: url("../img/Triumf-desktop.jpg");
+        background-size: 150vw;
+        background-size: 70vh;
+        background-repeat: no-repeat;
+    }
+
+    .aside2 {
+        grid-area: as2;
+        background-image: url("../img/triumfglass.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        grid-area: na;
+        background-color: rgb(73, 110, 163);
+        color: whitesmoke;
+        font-size: x-large;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .footer {
+        grid-area: fo;
+        background-color: rgb(73, 110, 163);
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr;
+        font-size: x-large;
+    }
+
+    .facebook {
+        margin-left: 50%;
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 767px) {
+    #container {
+        display: grid;
+        width: 200vw;
+       height: 300vh;
+       grid-gap: 5px;
+        grid-template-rows: 2fr 1fr 3fr 3fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'he he'
+        'ar ar'
+        'na na'
+        'as1 as2'
+        'fo fo';
+    }
+    .header {
+        grid-area: he;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        margin-top: 4%;
+    }
+
+    .article {
+        grid-area: ar;
+        background-color: rgb(188, 8, 7);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .innerarticle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        right: 410px;
+        height: 60vh;
+        top: 60vh;
+        align-items: center;
+        background-color: rgb(188, 8, 7);
+        width: 40%;
+        transition: all 1s;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: whitesmoke;
+        margin: 5px;
+        border-radius: 10%;
+        transition: all 0,3;
+    }
+
+    .burger {
+        margin-right: 50px;
+        cursor: pointer;
+    }
+
+    a:link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: darkgray;
+        text-decoration: none;
+    }
+
+    .aside1 {
+        grid-area: as1;
+        background-image: url("../img/Triumf-mobil.jpg");
+        background-size: 150vw;
+        background-size: 75vh;
+        background-repeat: no-repeat;
+        }
+
+    .aside2 {
+        grid-area: as2;
+        background-image: url("../img/triumfglass.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        grid-area: na;
+        background-color: rgb(73, 110, 163);
+        display: flex;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: xx-large;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .footer {
+        grid-area: fo;
+        background-color: rgb(73, 110, 163);
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr;
+        font-size: xx-large;
+        padding-top: 5%;
+    }
+
+    .facebook {
+        margin-left: 30%;
+        margin-top: 20%;
+    }
+
+    .navActive {
+        transform: translateX(30vh);
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px)
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px)
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #container2 {
+        display: grid;
+        width: 100vw;
+       height: 170vh;
+        grid-template-rows: 2fr 1fr 4fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'he he'
+        'ar ar'
+        'na na'
+        'fo fo';
+    }
+
+    .header1 {
+        grid-area: he;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        margin-top: 1%;
+    }
+
+    .article1 {
+        grid-area: ar;
+        background-color: rgb(188, 8, 7);
+        display: grid;
+        width: 100vw;
+        height: 150vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 80px;
+    }
+
+    .innerarticle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    a:link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: darkgray;
+        text-decoration: none;
+    }
+
+    .nav {
+        grid-area: na;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer {
+        grid-area: fo;
+        display: flex;
+        justify-content: flex-end;
+    }
 }

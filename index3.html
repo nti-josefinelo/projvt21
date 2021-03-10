@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triumf glasscafe Sävedalen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container2">
+        <header class="header1">
+            <img src="img/glass.png" alt="glass" height="150px" width="70px">
+            <img src="img/triumflogga.png" alt="Triumflogga">
+            <img src="img/glass.png" alt="glass" height="150px" width="70px">
+        </header>
+        <article class="article1">
+            <div class="innerarticle"><a href="index.html"><h2> Hem </h2></a></div>
+            <div class="innerarticle"><a href="index3.html"><h2> Sortiment </h2></a></div>
+            <div class="innerarticle"><a href="index4.html"><h2> Hitta oss </h2></a></div>
+            <div class="innerarticle"><a href="index5.html"><h2> Om oss </h2></a></div>
+            <div class="innerarticle"><img src="img/förstoringsglas.svg"></div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </article>
+        <nav class="nav">
+            <img src="img/sortiment.jpg" alt="sortiment">
+            <h2>Gräddglass</h2>
+        </nav>
+        <footer class="footer">
+            <img src="img/triumfmaskot.png" alt="Triumfs maskot">
+        </footer>
+    </div>
+    
+    <script>
+        function meny() {
+            document.querySelector('.innerarticle').classList.toggle('navActive')
+            document.querySelector('.burger').classList.toggle('toggle')
+        }
+
+        document.querySelector('.burger').addEventListener('click', meny)
+
+    </script>
+</body>
+</html>

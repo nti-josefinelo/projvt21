@@ -10,13 +10,47 @@
 </head>
 <body>
     <div id="container">
-    <header class="header">header</header>
-    <article class="article">article</article>
-    <aside class="aside1">aside1</aside>
-    <aside class="aside2">aside2</aside>
-    <nav class="nav">nav</nav>
-    <footer class="footer">footer</footer>
-    </div>
-    
+    <header class="header">
+        <img src="img/glass.png" alt="glass" height="150px" width="70px">
+        <img src="img/triumflogga.png" alt="Triumflogga">
+        <img src="img/glass.png" alt="glass" height="150px" width="70px">
+    </header>
+    <article class="article">
+        <div class="innerarticle"><a href="index.html"><h2> Hem </h2></a></div>
+        <div class="innerarticle"><a href="index3.html"><h2> Sortiment </h2></a></div>
+        <div class="innerarticle"><a href="index4.html"><h2> Hitta oss </h2></a></div>
+        <div class="innerarticle"><a href="index5.html"><h2> Om oss </h2></a></div>
+        <div class="innerarticle"><img src="img/förstoringsglas.svg"></div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </article>
+    <aside class="aside1"></aside>
+    <aside class="aside2"></aside>
+    <nav class="nav">
+        <p>Öppettider:<br>
+        Måndag-Lördag: 10:00-18:00<br>
+        Söndag: 11:00-18:00<br>
+        <br>
+        På Triumsglasscafe i Sävedalen kan du köpa ett brett utbud av gräddglass, sorbet och laktosfriglass.
+    Vårt koncept är att du ska ha möjlighet att testa på triumfs olika smaker, i ett trevligt caféklimat.</p>
+    </nav>
+    <footer class="footer">
+        <a class="facebook" href="https://sv-se.facebook.com/triumfglass">Besök triumfs facebook!</a>
+        <img src="img/triumfmaskot.png" alt="Triumfs maskot">
+    </footer>
+    </div>  
+
+    <script>
+        function meny() {
+            document.querySelector('.innerarticle').classList.toggle('navActive')
+            document.querySelector('.burger').classList.toggle('toggle')
+        }
+
+        document.querySelector('.burger').addEventListener('click', meny)
+
+    </script>
 </body>
 </html>
