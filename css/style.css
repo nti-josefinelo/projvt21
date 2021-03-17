@@ -4,47 +4,70 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/*Första sida*/
+
 @media screen and (min-width: 768px) {
     #container {
         display: grid;
         grid-gap: 5px;
         width: 100vw;
-       height: 170vh;
-        grid-template-rows: 2fr 1fr 3fr 3fr 2fr;
+        height: 180vh;
+        grid-template-rows: 2fr 1fr 6fr 0.2fr;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
         'he he he'
         'ar ar ar'
-        'as1 na na'
-        'as2 na na'
+        'ma ma ma'
         'fo fo fo';
+    }
+
+    ul {
+        float: left;
     }
 
     .header {
         grid-area: he;
         background-color: white;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         height: 80%;
         margin-top: 1%;
+        background-image: url("../img/triumflogga.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 
     .article {
         grid-area: ar;
         background-color: rgb(188, 8, 7);
-        display: grid;
-        width: 100vw;
-        height: 150vh;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        height: 80px;
-    }
-
-    .innerarticle {
         display: flex;
         justify-content: center;
         align-items: center;
-        align-content: center;
+    }
+
+    #start {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'as1 na'
+        'as2 na';
+    }
+
+    #sortiment {
+        grid-area: ma;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'sm na2';
     }
 
     a:link {
@@ -65,16 +88,18 @@
     .aside1 {
         grid-area: as1;
         background-image: url("../img/Triumf-desktop.jpg");
-        background-size: 150vw;
-        background-size: 70vh;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
 
     .aside2 {
         grid-area: as2;
         background-image: url("../img/triumfglass.jpg");
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 
     .nav {
@@ -84,6 +109,19 @@
         font-size: x-large;
         padding-top: 20px;
         padding-left: 20px;
+    }
+
+    .nav2 {
+        grid-area: na2;
+        background-color: rgb(73, 110, 163);
+        color: whitesmoke;
+        font-size: x-large;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #smaker {
+        grid-area: sm;
     }
 
     .footer {
@@ -99,51 +137,51 @@
         margin-left: 50%;
         margin-top: 10%;
     }
+
+    p {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
 }
+
 @media screen and (max-width: 767px) {
     #container {
         display: grid;
-        width: 200vw;
-       height: 300vh;
+        width: 100vw;
+       height: 180vh;
        grid-gap: 5px;
         grid-template-rows: 2fr 1fr 3fr 3fr 2fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         'he he'
         'ar ar'
-        'na na'
-        'as1 as2'
+        'ma ma'
         'fo fo';
     }
+
     .header {
         grid-area: he;
         background-color: white;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         height: 80%;
-        margin-top: 4%;
+        margin-top: 1%;
+        justify-content: center;
+        background-image: url("../img/triumflogga.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #logga {
+        height: 15vh;
+        margin-top: 5%;
     }
 
     .article {
         grid-area: ar;
         background-color: rgb(188, 8, 7);
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .innerarticle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        position: absolute;
-        right: 410px;
-        height: 60vh;
-        top: 60vh;
-        align-items: center;
-        background-color: rgb(188, 8, 7);
-        width: 40%;
-        transition: all 1s;
     }
 
     .burger div {
@@ -153,6 +191,21 @@
         margin: 5px;
         border-radius: 10%;
         transition: all 0,3;
+    }
+
+    .links {
+        background-color: rgb(188, 8, 7);
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        left: -79%;
+        height: 40vh;
+        top: 32.5%;
+        align-items: center;
+        width: 50%;
+        transition: all 1s;
     }
 
     .burger {
@@ -175,21 +228,6 @@
         text-decoration: none;
     }
 
-    .aside1 {
-        grid-area: as1;
-        background-image: url("../img/Triumf-mobil.jpg");
-        background-size: 150vw;
-        background-size: 75vh;
-        background-repeat: no-repeat;
-        }
-
-    .aside2 {
-        grid-area: as2;
-        background-image: url("../img/triumfglass.jpg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
-
     .nav {
         grid-area: na;
         background-color: rgb(73, 110, 163);
@@ -199,6 +237,10 @@
         font-size: xx-large;
         padding-top: 20px;
         padding-left: 20px;
+    }
+    
+    #smaker {
+        grid-area: sm;
     }
 
     .footer {
@@ -231,73 +273,5 @@
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px)
     }
-}
-
-@media screen and (min-width: 768px) {
-    #container2 {
-        display: grid;
-        width: 100vw;
-       height: 170vh;
-        grid-template-rows: 2fr 1fr 4fr 2fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        'he he'
-        'ar ar'
-        'na na'
-        'fo fo';
-    }
-
-    .header1 {
-        grid-area: he;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        height: 80%;
-        margin-top: 1%;
-    }
-
-    .article1 {
-        grid-area: ar;
-        background-color: rgb(188, 8, 7);
-        display: grid;
-        width: 100vw;
-        height: 150vh;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        height: 80px;
-    }
-
-    .innerarticle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    a:link {
-        color: whitesmoke;
-        text-decoration: none;
-    }
-
-    a:visited {
-        color: whitesmoke;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: darkgray;
-        text-decoration: none;
-    }
-
-    .nav {
-        grid-area: na;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .footer {
-        grid-area: fo;
-        display: flex;
-        justify-content: flex-end;
-    }
+    
 }
