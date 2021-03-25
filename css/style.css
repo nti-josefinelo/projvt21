@@ -34,9 +34,11 @@ html, body {
         grid-area: he;
         background-color: white;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height: 80%;
         margin-top: 1%;
+        margin-left: 20%;
+        margin-right: 20%;
         background-image: url("../img/triumflogga.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -54,7 +56,7 @@ html, body {
     #start {
         display: grid;
         grid-area: ma;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
         'as1 na'
@@ -64,10 +66,30 @@ html, body {
     #sortiment {
         grid-area: ma;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
         'sm na2';
+    }
+
+    #hitta {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr;
+        grid-template-areas: 
+        'na3 na3'
+        'as3 as3';
+    }
+
+    #about {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'as4 na4'
+        'as5 na4';
     }
 
     a:link {
@@ -102,6 +124,29 @@ html, body {
         background-size: 100% 100%;
     }
 
+    .aside3 {
+        grid-area: as3;
+        background-color: rgb(73, 110, 163);
+        color: whitesmoke;
+        font-size: x-large;
+    }
+
+    .aside4 {
+        grid-area: as4;
+        background-image: url("../img/innuti1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .aside5 {
+        grid-area: as5;
+        background-image: url("../img/innuti2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .nav {
         grid-area: na;
         background-color: rgb(73, 110, 163);
@@ -120,8 +165,29 @@ html, body {
         padding-left: 20px;
     }
 
+    .nav3 {
+        grid-area: na3;
+        background-color: rgb(71, 110, 165);
+        background-image: url(../img/Hitta.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .nav4 {
+        grid-area: na4;
+        background-color: rgb(71, 110, 165);
+        font-size: x-large;
+        color: whitesmoke;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
     #smaker {
         grid-area: sm;
+        background-image: url("../img/sortiment.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 
     .footer {
@@ -138,6 +204,10 @@ html, body {
         margin-top: 10%;
     }
 
+    .hemsida {
+        font-size: xx-large;
+    }
+
     p {
         padding-top: 20px;
         padding-left: 20px;
@@ -151,7 +221,7 @@ html, body {
         width: 100vw;
        height: 180vh;
        grid-gap: 5px;
-        grid-template-rows: 2fr 1fr 3fr 3fr 2fr;
+        grid-template-rows: 1fr 0.2fr 5fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         'he he'
@@ -164,14 +234,15 @@ html, body {
         grid-area: he;
         background-color: white;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height: 80%;
         margin-top: 1%;
-        justify-content: center;
+        margin-left: 7%;
+        margin-right: 7%;
         background-image: url("../img/triumflogga.png");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 70%;
     }
 
     #logga {
@@ -200,12 +271,13 @@ html, body {
         align-items: flex-start;
         flex-direction: column;
         position: absolute;
-        left: -79%;
+        right:109%;
         height: 40vh;
-        top: 32.5%;
+        top: 27.5%;
         align-items: center;
         width: 50%;
         transition: all 1s;
+        text-align: right;
     }
 
     .burger {
@@ -228,19 +300,139 @@ html, body {
         text-decoration: none;
     }
 
+    #start {
+        grid-area: ma;
+        background-color: rgb(73, 110, 163);
+        display: grid;
+        color: whitesmoke;
+        font-size: xx-large;
+        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'na na'
+        'as1 as2';
+    }
+
+    #sortiment {
+        grid-area: ma;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'sm na2'
+        'ba na2';
+    }
+
+    #hitta {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr;
+        grid-template-areas: 
+        'na3 na3'
+        'as3 as3';
+    }
+
+    #about {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'na4 na4'
+        'as4 as5';
+    }
+
     .nav {
         grid-area: na;
         background-color: rgb(73, 110, 163);
-        display: flex;
-        justify-content: center;
         color: whitesmoke;
-        font-size: xx-large;
+        font-size: x-large;
         padding-top: 20px;
         padding-left: 20px;
     }
-    
+
+    .nav2 {
+        grid-area: na2;
+        background-color: rgb(73, 110, 163);
+        color: whitesmoke;
+        font-size: x-large;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .nav3 {
+        grid-area: na3;
+        background-color: rgb(73, 110, 163);
+        background-image: url(../img/Hitta.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .nav4 {
+        grid-area: na4;
+        background-color: rgb(71, 110, 165);
+        font-size: x-large;
+        color: whitesmoke;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    #background {
+        grid-area: ba;
+        background-color: rgb(73, 110, 163);
+    }
+
+    .aside1 {
+        grid-area: as1;
+        background-image: url("../img/Triumf-mobil.jpg");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+    }
+
+    .aside2 {
+        grid-area: as2;
+        background-image: url("../img/triumfglass.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-left: 5px;
+    }
+
+    .aside3 {
+        grid-area: as3;
+        background-color: rgb(73, 110, 163);
+        color: whitesmoke;
+        font-size: x-large;
+    }
+
+    .aside4 {
+        grid-area: as4;
+        background-image: url("../img/innuti1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-right: 5px;
+    }
+
+    .aside5 {
+        grid-area: as5;
+        background-image: url("../img/innuti2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-left: 5px;
+    }
+
     #smaker {
         grid-area: sm;
+        background-image: url("../img/sortiment.jpg");
+        background-size: 100% 100%;
     }
 
     .footer {
@@ -258,6 +450,10 @@ html, body {
         margin-top: 20%;
     }
 
+    .hemsida {
+        font-size: xx-large;
+    }
+
     .navActive {
         transform: translateX(30vh);
     }
@@ -273,5 +469,4 @@ html, body {
     .toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px)
     }
-    
 }

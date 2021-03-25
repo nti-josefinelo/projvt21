@@ -10,7 +10,6 @@
     <div id="container">
         <header class="header">
             <img src="img/glass.png" alt="glass" height="150px" width="70px">
-            <!-- <img id="logga" src="img/triumflogga.png" alt="Triumflogga"> -->
             <img src="img/glass.png" alt="glass" height="150px" width="70px">
         </header>
         <article class="article">
@@ -30,7 +29,7 @@
 
         <main id="sortiment">
         
-            <img id="smaker" src="img/sortiment.jpg" alt="sortiment" width="400vw" height="660vh">
+            <div id="smaker"></div>
             <nav class="nav2">
             <p>Gräddglass:<br>
             Hallonpaj, Pepparlakrits, Brynt smörkola, Gammaldags vanilj,<br>
@@ -47,21 +46,15 @@
             Gammaldags vanilj, Mjölkchoklad, Päron
             </p>
         </nav>
+        <div id="background"></div>
     </main>
 
         <footer class="footer">
-            <img src="img/triumfmaskot.png" alt="Triumfs maskot">
+            <a class="facebook" href="https://sv-se.facebook.com/triumfglass">Besök triumfs facebook!</a>
+        <img src="img/triumfmaskot.png" alt="Triumfs maskot">
         </footer>
     </div>
     
-    <script>
-        function meny() {
-            document.querySelector('.innerarticle').classList.toggle('navActive')
-            document.querySelector('.burger').classList.toggle('toggle')
-        }
-
-        document.querySelector('.burger').addEventListener('click', meny)
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
