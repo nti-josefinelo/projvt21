@@ -9,8 +9,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/*Första sida*/
-
 @media screen and (min-width: 768px) {
     #container {
         display: grid;
@@ -26,8 +24,14 @@ html, body {
         'fo fo fo';
     }
 
-    ul {
+    ul.links li{
         float: left;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    ul {
+        list-style-type: none;
     }
 
     .header {
@@ -126,7 +130,7 @@ html, body {
 
     .aside3 {
         grid-area: as3;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
     }
@@ -149,7 +153,7 @@ html, body {
 
     .nav {
         grid-area: na;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
         padding-top: 20px;
@@ -158,7 +162,7 @@ html, body {
 
     .nav2 {
         grid-area: na2;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
         padding-top: 20px;
@@ -167,7 +171,7 @@ html, body {
 
     .nav3 {
         grid-area: na3;
-        background-color: rgb(71, 110, 165);
+        background-color: rgb(14, 73, 156);
         background-image: url(../img/Hitta.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -176,7 +180,7 @@ html, body {
 
     .nav4 {
         grid-area: na4;
-        background-color: rgb(71, 110, 165);
+        background-color: rgb(14, 73, 156);
         font-size: x-large;
         color: whitesmoke;
         padding-top: 10px;
@@ -192,7 +196,7 @@ html, body {
 
     .footer {
         grid-area: fo;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         display: grid;
         grid-template-columns: 5fr 1fr;
         grid-template-rows: 1fr;
@@ -212,7 +216,6 @@ html, body {
         padding-top: 20px;
         padding-left: 20px;
     }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -228,6 +231,10 @@ html, body {
         'ar ar'
         'ma ma'
         'fo fo';
+    }
+
+    ul {
+        list-style-type: none;
     }
 
     .header {
@@ -261,7 +268,7 @@ html, body {
         background-color: whitesmoke;
         margin: 5px;
         border-radius: 10%;
-        transition: all 0,3;
+        transition: all 0.3;
     }
 
     .links {
@@ -271,7 +278,7 @@ html, body {
         align-items: flex-start;
         flex-direction: column;
         position: absolute;
-        right:109%;
+        right: 100%;
         height: 40vh;
         top: 27.5%;
         align-items: center;
@@ -302,7 +309,7 @@ html, body {
 
     #start {
         grid-area: ma;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         display: grid;
         color: whitesmoke;
         font-size: xx-large;
@@ -346,7 +353,7 @@ html, body {
 
     .nav {
         grid-area: na;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
         padding-top: 20px;
@@ -355,7 +362,7 @@ html, body {
 
     .nav2 {
         grid-area: na2;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
         padding-top: 20px;
@@ -364,7 +371,7 @@ html, body {
 
     .nav3 {
         grid-area: na3;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         background-image: url(../img/Hitta.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -373,7 +380,7 @@ html, body {
 
     .nav4 {
         grid-area: na4;
-        background-color: rgb(71, 110, 165);
+        background-color: rgb(14, 73, 156);
         font-size: x-large;
         color: whitesmoke;
         padding-top: 10px;
@@ -382,7 +389,7 @@ html, body {
 
     #background {
         grid-area: ba;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
     }
 
     .aside1 {
@@ -406,7 +413,7 @@ html, body {
 
     .aside3 {
         grid-area: as3;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         color: whitesmoke;
         font-size: x-large;
     }
@@ -437,7 +444,7 @@ html, body {
 
     .footer {
         grid-area: fo;
-        background-color: rgb(73, 110, 163);
+        background-color: rgb(14, 73, 156);
         display: grid;
         grid-template-columns: 5fr 1fr;
         grid-template-rows: 1fr;
