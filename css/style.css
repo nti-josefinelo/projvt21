@@ -96,6 +96,16 @@ html, body {
         'as5 na4';
     }
 
+    #boka {
+        display: grid;
+        grid-area: ma;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'as6 na5'
+        'as7 na5';
+    }
+
     a:link {
         color: whitesmoke;
         text-decoration: none;
@@ -151,6 +161,22 @@ html, body {
         background-position: center;
     }
 
+    .aside6 {
+        grid-area: as6;
+        background-image: url("../img/Kalas.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .aside7 {
+        grid-area: as7;
+        background-image: url("../img/ballonger.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
     .nav {
         grid-area: na;
         background-color: rgb(14, 73, 156);
@@ -185,6 +211,24 @@ html, body {
         color: whitesmoke;
         padding-top: 10px;
         padding-left: 10px;
+    }
+
+    .nav5 {
+        grid-area: na5;
+        background-color: rgb(14, 73, 156);
+        font-size: x-large;
+        color: whitesmoke;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    table {
+        border: ridge;
+        margin-top: 60px;
+    }
+
+    tr, th {
+        padding: 10px;
     }
 
     #smaker {
@@ -351,6 +395,17 @@ html, body {
         'as4 as5';
     }
 
+    #boka {
+        display: grid;
+        grid-area: ma;
+        background-color: rgb(14, 73, 156);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas: 
+        'na5 na5'
+        'as6 as7';
+    }
+
     .nav {
         grid-area: na;
         background-color: rgb(14, 73, 156);
@@ -385,6 +440,15 @@ html, body {
         color: whitesmoke;
         padding-top: 10px;
         padding-left: 10px;
+    }
+
+    .nav5 {
+        grid-area: na5;
+        background-color: rgb(14, 73, 156);
+        font-size: x-large;
+        color: whitesmoke;
+        padding-top: 20px;
+        padding-left: 20px;
     }
 
     #background {
@@ -434,6 +498,36 @@ html, body {
         background-size: cover;
         background-position: center;
         margin-left: 5px;
+    }
+
+    .aside6 {
+        grid-area: as6;
+        background-image: url(../img/Kalas.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+
+    .aside7 {
+        grid-area: as7;
+        background-image: url(../img/ballonger.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 10px;
+    }
+
+    table {
+        border: ridge;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    tr, th {
+        padding: 10px;
     }
 
     #smaker {
